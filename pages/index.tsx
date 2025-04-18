@@ -1,59 +1,89 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
+import { Button } from "@heroui/button";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableColumn,
+  TableHeader,
+  TableRow,
+} from "@heroui/table";
+import { useEffect, useState } from "react";
 
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
+import { type Meme, initialMemes } from "@/lib/memes";
+import { EditMemeModal } from "@/components/edit-meme-modal";
 
 export default function IndexPage() {
+  const [memes, setMemes] = useState<Meme[]>([]);
+  const [selectedMeme, setSelectedMeme] = useState<Meme | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  useEffect(() => {
+    // Try to load memes from localStorage
+    const storedMemes = localStorage.getItem("memes");
+
+    if (storedMemes) {
+      setMemes(JSON.parse(storedMemes));
+    } else {
+      setMemes(initialMemes);
+      localStorage.setItem("memes", JSON.stringify(initialMemes));
+    }
+  }, []);
+
+  const handleEditClick = (meme: Meme) => {
+    setSelectedMeme(meme);
+    setIsModalOpen(true);
+  };
+
+  const handleSaveMeme = (updatedMeme: Meme) => {
+    const updatedMemes = memes.map((meme) =>
+      meme.id === updatedMeme.id ? updatedMeme : meme,
+    );
+
+    setMemes(updatedMemes);
+    localStorage.setItem("memes", JSON.stringify(updatedMemes));
+    setIsModalOpen(false);
+  };
+
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-xl text-center justify-center">
-          <span className={title()}>Make&nbsp;</span>
-          <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-          <br />
-          <span className={title()}>
-            websites regardless of your design experience.
-          </span>
-          <div className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern React UI library.
-          </div>
-        </div>
+      <section className="flex flex-col items-center justify-center">
+        <h1 className={title()}>Meme Directory - List View</h1>
+        <Table className="my-10">
+          <TableHeader>
+            <TableColumn>ID</TableColumn>
+            <TableColumn>Name</TableColumn>
+            <TableColumn>Likes</TableColumn>
+            <TableColumn>Actions</TableColumn>
+          </TableHeader>
+          <TableBody>
+            {memes.map((meme) => (
+              <TableRow key={meme.id}>
+                <TableCell>{meme.id}</TableCell>
+                <TableCell>{meme.name}</TableCell>
+                <TableCell>{meme.likes}</TableCell>
+                <TableCell>
+                  <Button
+                    variant="bordered"
+                    onClick={() => handleEditClick(meme)}
+                  >
+                    Edit
+                  </Button>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
 
-        <div className="flex gap-3">
-          <Link
-            isExternal
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-            })}
-            href={siteConfig.links.docs}
-          >
-            Documentation
-          </Link>
-          <Link
-            isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
-          >
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
-        </div>
-
-        <div className="mt-8">
-          <Snippet hideCopyButton hideSymbol variant="bordered">
-            <span>
-              Get started by editing{" "}
-              <Code color="primary">pages/index.tsx</Code>
-            </span>
-          </Snippet>
-        </div>
+        {selectedMeme && (
+          <EditMemeModal
+            isOpen={isModalOpen}
+            meme={selectedMeme}
+            onClose={() => setIsModalOpen(false)}
+            onSave={handleSaveMeme}
+          />
+        )}
       </section>
     </DefaultLayout>
   );
