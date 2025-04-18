@@ -39,7 +39,7 @@ export const Navbar = () => {
                   className={clsx(
                     linkStyles({ color: "foreground" }),
                     "data-[active=true]:underline data-[active=true]:underline",
-                    isActive && "text-red-500"
+                    isActive && "text-red-500",
                   )}
                   color="foreground"
                   href={item.href}
@@ -83,7 +83,7 @@ export const Navbar = () => {
                   className={clsx(
                     linkStyles({ color: "foreground" }),
                     "data-[active=true]:underline data-[active=true]:underline",
-                    isActive && "text-red-500"
+                    isActive && "text-red-500",
                   )}
                   href={item.href}
                   size="lg"
