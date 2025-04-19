@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    // domains: ['i.kym-cdn.com'],
     remotePatterns: [
       {
         protocol: "https",
