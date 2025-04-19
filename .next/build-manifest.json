@@ -11,30 +11,6 @@
       "static/chunks/pages__app_5771e1._.js",
       "static/chunks/pages__app_8fab56._.js"
     ],
-    "/list": [
-      "static/chunks/node_modules_next_4cdb16._.js",
-      "static/chunks/node_modules_react_1cad9b._.js",
-      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
-      "static/chunks/node_modules_react-dom_f14d04._.js",
-      "static/chunks/node_modules_@react-aria_3c6a1b._.js",
-      "static/chunks/node_modules_@react-aria_cd9361._.js",
-      "static/chunks/node_modules_framer-motion_dist_es_426081._.js",
-      "static/chunks/node_modules_937130._.js",
-      "static/chunks/[root of the server]__8179d8._.js",
-      "static/chunks/node_modules_@heroui_dom-animation_dist_index_mjs_5e7098._.js",
-      "static/chunks/pages_list_index_tsx_5771e1._.js",
-      "static/chunks/pages_list_index_tsx_93b41a._.js"
-    ],
-    "/_error": [
-      "static/chunks/[root of the server]__577f55._.js",
-      "static/chunks/node_modules_react_b2385d._.js",
-      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
-      "static/chunks/node_modules_react-dom_f14d04._.js",
-      "static/chunks/node_modules_a6e291._.js",
-      "static/chunks/[root of the server]__2e1cf5._.js",
-      "static/chunks/pages__error_5771e1._.js",
-      "static/chunks/pages__error_f68362._.js"
-    ],
     "/": [
       "static/chunks/node_modules_next_740307._.js",
       "static/chunks/node_modules_react_1cad9b._.js",
@@ -52,6 +28,20 @@
       "static/chunks/node_modules_@heroui_dom-animation_dist_index_mjs_0d13a4._.js",
       "static/chunks/pages_index_5771e1._.js",
       "static/chunks/pages_index_288f37._.js"
+    ],
+    "/list": [
+      "static/chunks/node_modules_next_4cdb16._.js",
+      "static/chunks/node_modules_react_1cad9b._.js",
+      "static/chunks/node_modules_react-dom_cjs_react-dom_development_ab7e07.js",
+      "static/chunks/node_modules_react-dom_f14d04._.js",
+      "static/chunks/node_modules_@react-aria_3c6a1b._.js",
+      "static/chunks/node_modules_@react-aria_cd9361._.js",
+      "static/chunks/node_modules_framer-motion_dist_es_426081._.js",
+      "static/chunks/node_modules_937130._.js",
+      "static/chunks/[root of the server]__8179d8._.js",
+      "static/chunks/node_modules_@heroui_dom-animation_dist_index_mjs_5e7098._.js",
+      "static/chunks/pages_list_index_tsx_5771e1._.js",
+      "static/chunks/pages_list_index_tsx_93b41a._.js"
     ]
   },
   "devFiles": [],
