@@ -1,55 +1,36 @@
-# Next.js & HeroUI Template
+# 🎭 MemeHub - Next.js Meme Gallery
+Live Demo: [DEMO PREVIEW](https://meme-app-production-54b4.up.railway.app/)
 
-This is a template for creating applications using Next.js 14 (pages directory) and HeroUI (v2).
+A modern meme showcase built with:
+⚡ Next.js 15 • 🎨 Tailwind CSS • 🚄 Railway Hosting • ⚡ Hero UI
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/next-pages-template)
+## Features:
+✅ Responsive meme grid with optimized images
+✅ Dynamic like counters with simulated engagement
+✅ Zero-config deployments via Railway
+✅ Automatic image optimization with next/image
 
-> Note: Since Next.js 14, the pages router is recommend migrating to the [new App Router](https://nextjs.org/docs/app) to leverage React's latest features
->
-> Read more: [Pages Router](https://nextjs.org/docs/pages)
+## How It Works:
 
-## Technologies Used
+- Curated collection of 10 classic memes
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI](https://heroui.com)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Framer Motion](https://www.framer.com/motion)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+- Statically generated for instant loads
 
-## How to Use
+- Full responsive design (mobile → desktop)
 
-To create a new project based on this template using `create-next-app`, run the following command:
+## Tech Stack Deep Dive:
 
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-pages-template
-```
+- **Frontend:** Next.js App Router + TypeScript
 
-### Install dependencies
+- **Styling:** Tailwind CSS with responsive grids
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
+- **Hosting:** Automated Railway deployments
 
-```bash
-npm install
-```
+- **Performance:** 90+ Lighthouse score
 
-### Run the development server
+## Try It Out:
 
-```bash
-npm run dev
-```
+    git clone https://github.com/your-username/meme-app.git
+    npm install
+    npm run dev
 
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-pages-template/blob/main/LICENSE).
