@@ -49,7 +49,7 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center">
-        <h1 className={title()}>Meme Directory - List View</h1>
+        <h1 className={title()}>Meme Directory - Table View</h1>
         <Table className="my-10">
           <TableHeader>
             <TableColumn>ID</TableColumn>
