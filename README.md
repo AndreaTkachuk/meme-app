@@ -1,5 +1,6 @@
 # 🎭 MemeHub - Next.js Meme Gallery
 Live Demo: [DEMO PREVIEW](https://meme-app-production-54b4.up.railway.app/)
+Task: [Link](https://docs.google.com/document/d/19K-gh9IJOYOHtlmSnb4e73cFm9DxBteLJjQWHjIh3bQ/edit?usp=sharing)
 
 A modern meme showcase built with:
 ⚡ Next.js 15 • 🎨 Tailwind CSS • 🚄 Railway Hosting • ⚡ Hero UI
